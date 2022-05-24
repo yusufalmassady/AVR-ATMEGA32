@@ -133,7 +133,7 @@ default : break;
 }
 }
 //RETURNS THE VALU OF AN INPUT PORT 
-u8 DIOGetPort (u8 Copy_u8PortName){
+u8 MDIO_u8GetPort (u8 Copy_u8PortName){
 	u8 Local_u8PortValue;
 	switch (Copy_u8PortName){
 		case DIO_PORTA : Local_u8PortValue=PINA;
@@ -149,7 +149,7 @@ u8 DIOGetPort (u8 Copy_u8PortName){
 	return Local_u8PortValue;
 }
 //RETURNS THE VALUE OF AN INPUT PIN
-u8 DIOGetPinValue (u8 Copy_u8PortName , u8 Copy_u8PinNumber){
+u8 MDIO_u8GetPinValue (u8 Copy_u8PortName , u8 Copy_u8PinNumber){
 u8 Local_u8PinValue;
 switch(Copy_u8PortName){
 case DIO_PORTA : Local_u8PinValue =  ((PINA >> Copy_u8PinNumber)&1);
